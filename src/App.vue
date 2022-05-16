@@ -1,21 +1,16 @@
+<template>
+  <van-tabbar v-model="active">
+    <van-tabbar-item name="home" icon="home-o">标签</van-tabbar-item>
+    <van-tabbar-item name="search" icon="search">标签</van-tabbar-item>
+    <van-tabbar-item name="friends" icon="friends-o">标签</van-tabbar-item>
+    <van-tabbar-item name="setting" icon="setting-o">标签</van-tabbar-item>
+  </van-tabbar>
+</template>
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import { ref } from 'vue'
+const active = ref('home')
 </script>
 
-<template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-</template>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
