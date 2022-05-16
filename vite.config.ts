@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vitePluginImp from 'vite-plugin-imp'
+import postCssPxToRem from "postcss-pxtorem"
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -15,12 +16,16 @@ export default defineConfig({
       ]
     })
   ],
-  build:{
-    terserOptions: {
-        compress: {
-          drop_console: true,
-          drop_debugger: true
-        }
+  css: {
+    postcss: {
+      plugins: [
+        postCssPxToRem({
+          rootValue({ file }) {
+            return file.indexOf('vant') !== -1 ? 100 : 100;
+          },
+          propList: ['*'],
+        })
+      ]
     }
   },
   server: {
@@ -29,5 +34,5 @@ export default defineConfig({
     open: true,
     https: false,
     proxy: {}
-  },
+  }
 })
