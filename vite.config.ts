@@ -21,7 +21,7 @@ export default defineConfig({
       plugins: [
         postCssPxToRem({
           rootValue({ file }) {
-            return file.indexOf('vant') !== -1 ? 100 : 100;
+            return file.indexOf('vant') !== -1 ? 50 : 100;
           },
           propList: ['*'],
         })
