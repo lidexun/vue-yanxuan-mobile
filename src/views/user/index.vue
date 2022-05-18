@@ -1,5 +1,5 @@
 <template>
-  <router-view />
+  user
 </template>
 <script setup lang="ts">
 </script>

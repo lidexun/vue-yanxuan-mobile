@@ -1,5 +1,5 @@
 <template>
-  <router-view />
+  cart
 </template>
 <script setup lang="ts">
 </script>
