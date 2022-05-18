@@ -1,6 +1,9 @@
+:root{
+  --van-blue: var(#ee0a24);
+}
 html {
   box-sizing: border-box;
-  font-size: calc(100vw / 7.5 * 2);
+  font-size: calc(100vw / 7.5);
 }
 
 *,
@@ -13,7 +16,7 @@ body {
   word-break: break-word;
   margin: 0;
   color: #333;
-  font-size: 14px;
+  font-size: 28px;
   font-variant: tabular-nums;
   line-height: 1.5715;
   background-color: #fff;
